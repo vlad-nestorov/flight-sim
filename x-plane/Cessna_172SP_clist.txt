@@ -1,0 +1,279 @@
+# Cessna 172SP Streamlined Procedures for X-Plane Flight Simulator
+#
+# The procedures were developed from the Cessna 172 manual for their structure and sequences.
+# The checklists were streamlined by omitting or simplifying procedures that are related to
+# equipment or functions not performed or simulated in X-Plane.
+#
+# Designed for the Cessna 172SP provided by Laminar Research in X-Plane.
+# For use with the XChecklist plug-in (Plug-in credits to Michal & Bill).
+#
+# v1.2
+#
+sw_checklist:*** CESSNA 172SP ***:PERFORMANCE LIMITS
+sw_rcolsize:60
+sw_itemvoid:CESSNA 172SP PERFORMANCE LIMITS
+sw_itemvoid:________________________________________________
+sw_itemvoid:MAX AIRSPEEED (VNE)|163 KNOTS
+sw_itemvoid:MAX CRUISE (VNO)|129 KNOTS
+sw_itemvoid:MAX MANEUVERING SPEED (VA)|105 KNOTS
+sw_itemvoid:MAX W FLAPS EXTENDED (VFE-10 DEG)|110 KNOTS
+sw_itemvoid:MAX W FLAPS EXTENDED (VFE-20/30 DEG)|85 KNOTS
+sw_itemvoid:
+sw_itemvoid:FUEL CAPACITY (MAX)|56 US GAL
+sw_itemvoid:FUEL CAPACITY (USEABLE)|53 US GAL
+sw_itemvoid:ENDURANCE (8500 FT, 75% PWR, 53 GAL)|4.2 HRS
+sw_itemvoid:RANGE (8500 FT, 75% PWR, 53 GAL)|518 NM
+sw_itemvoid:MAX ENDURANCE (10000 FT, 45% PWR, 53 GAL)|6.7 HRS
+sw_itemvoid:MAX RANGE (10000 FT, 45% PWR, 53 GAL)|638 NM
+sw_itemvoid:
+sw_itemvoid:MAX GROSS WEIGHT|2,558 LBS
+sw_itemvoid:EMPTY WEIGHT|1,663 LBS
+sw_itemvoid:USEFUL LOAD|895 LBS
+sw_itemvoid:
+sw_itemvoid:SERVICE CEILING|14,000 FT
+sw_itemvoid:CLIMB RATE (SEA LEVEL)|730 FPM
+sw_itemvoid:
+sw_itemvoid:TAKEOFF GROUND ROLL|960 FT
+sw_itemvoid:TAKEOFF DISTANCE OVER 50 FT OBSTACLE|1,630 FT
+sw_itemvoid:LANDING GROUND ROLL|575 FT
+sw_itemvoid:LANDING DISTANCE OVER 50 FT OBSTACLE|1,335 FT
+sw_itemvoid:MAX CROSSWIND TAKEOFF/LANDING|15 KNOTS
+sw_itemvoid:
+sw_item:CESSNA 172SP PERFORMANCE LIMITS|ACKNOWLEDGED
+sw_itemvoid:________________________________________________
+sw_itemvoid:Checklists by KarlL - v 1.2 - Updated April 8, 2019
+#
+sw_checklist:PREFLIGHT:PREFLIGHT
+sw_rcolsize:60
+sw_remark:PREFLIGHT - CABIN
+sw_itemvoid:________________________________________________
+sw_itemvoid:
+sw_itemvoid:[DOCUMENTS]|[ON BOARD]
+#sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
+#sw_item:CONTROL LOCK|OFF
+sw_item:AVIONICS MASTER SWITCH|OFF:sim/cockpit/electrical/avionics_on:0
+sw_item:MASTER SWITCH|OFF:sim/cockpit/electrical/generator_on[0]:0
+sw_item:MIXTURE|IDLE CUTOFF:sim/cockpit2/engine/actuators/mixture_ratio[0]:<0.05
+sw_item:THROTTLE|CLOSED:sim/cockpit2/engine/actuators/throttle_ratio[0]:<0.05
+sw_item:SWITCHES/MAGNETOS|OFF:sim/cockpit2/engine/actuators/ignition_key[0]:0
+sw_item:MASTER SWITCH|ON:sim/cockpit/electrical/generator_on[0]:1
+sw_item:FLAPS|Fully Extended:sim/cockpit2/controls/flap_ratio:>0.90
+sw_item:FUEL QUANTITY|SUFFICIENT
+sw_item:MASTER SWITCH|OFF:sim/cockpit/electrical/generator_on[0]:0
+#
+#sw_item:AVIONICS MASTER SWITCH|ON:sim/cockpit/electrical/avionics_on:1
+#sw_item:AVIONICS COOLING FAN|AUDIBLE:sim/cockpit/electrical/avionics_on:1
+#sw_item:AVIONICS MASTER SWITCH|OFF:sim/cockpit/electrical/avionics_on:0
+#sw_item:STATIC PRESSURE ALTERNATE|OFF:sim/cockpit2/switches/alternate_static_air_ratio:<0.1
+#sw_item:WARNING LIGHTS PANEL|TESTED:sim/cockpit/warnings/annunciator_test_pressed:1
+#sw_item:FUEL SELECTOR VALVE|BOTH:laminar/c172/fuel/fuel_tank_selector:4
+#sw_item:FUEL SHUTOFF VALVE|PUSHED IN:laminar/c172/fuel/fuel_cutoff_selector:0
+#sw_item:FLAPS|UP:sim/cockpit2/controls/flap_ratio:<0.02
+sw_item:PITOT HEAT|ON:sim/cockpit/switches/pitot_heat_on:1
+sw_item:AMMETER CURRENT LOAD|CHECK
+sw_item:PITOT HEAT|OFF:sim/cockpit/switches/pitot_heat_on:0
+sw_item:MASTER SWITCH (BATTERY)|OFF:sim/cockpit/electrical/battery_on:0
+sw_item:ELEVATOR TRIM|SET FOR TAKEOFF:sim/cockpit2/controls/elevator_trim:-0.03|0.03
+sw_itemvoid:________________________________________________
+sw_remark:PREFLIGHT CHECKLIST COMPLETED
+sw_checklist:BEFORE STARTING ENGINE:BEFORE STARTING ENGINE
+sw_rcolsize:60
+sw_remark:BEFORE START
+sw_itemvoid:________________________________________________
+sw_itemvoid:
+sw_itemvoid:[EXTERNAL PREFLIGHT]|[COMPLETED]
+sw_itemvoid:[PASSENGER BRIEFING]|[COMPLETED]
+sw_itemvoid:[SEATS & BELTS]|[ADJUSTED & SECURE]
+sw_itemvoid:[CIRCUIT BREAKERS]|[CHECKED IN]
+sw_itemvoid:[ELECTRICAL EQUIPMENT]|[OFF]
+#sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
+sw_item:AUTOPILOT|OFF:sim/cockpit2/autopilot/autopilot_on:0
+sw_item:AVIONICS MASTER SWITCH|OFF:sim/cockpit/electrical/avionics_on:0
+sw_item:FUEL SELECTOR VALVE|BOTH:sim/cockpit2/fuel/fuel_tank_selector:4
+sw_item:FUEL SHUTOFF VALVE|PUSHED IN:sim/cockpit2/fuel/fuel_tank_selector:>0
+sw_itemvoid:________________________________________________
+sw_remark:BEFORE STARTING ENGINE CHECKLIST COMPLETED
+sw_checklist:STARTING ENGINE:STARTING ENGINE
+sw_rcolsize:60
+sw_remark:STARTING ENGINE CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:MASTER SWITCH (BATTERY)|ON:sim/cockpit/electrical/battery_on:1
+sw_item:BEACON LIGHT|ON:sim/cockpit/electrical/beacon_lights_on:1
+sw_item:THROTTLE|OPEN 1/4 INCH:sim/cockpit2/engine/actuators/throttle_ratio[0]:0.15|0.20
+sw_item:MIXTURE|FULL RICH:sim/cockpit2/engine/actuators/mixture_ratio[0]:>0.95
+sw_itemvoid:[CARB HEAT]|[COLD]
+sw_item:AUX FUEL PUMP|ON (3 Seconds):sim/cockpit/engine/fuel_pump_on[0]:1
+sw_item:AUX FUEL PUMP|OFF:sim/cockpit/engine/fuel_pump_on[0]:0
+sw_item:PROPELLER AREA|CLEAR
+sw_item:IGNITION SWITCH|START:sim/cockpit2/engine/actuators/ignition_key[0]:4
+sw_item:OIL PRESSURE|CHECKED
+sw_item:MASTER SWITCH (ALTERNATOR)|ON:sim/cockpit/electrical/generator_on[0]:1
+sw_item:AMMETER|CHECKED
+sw_item:Nav LIGHTS|ON (AT NIGHT):sim/cockpit2/switches/navigation_lights_on:1
+sw_item:AVIONICS MASTER SWITCH|ON:sim/cockpit/electrical/avionics_on:1
+sw_itemvoid:[RADIOS & GPS]|[ON]
+sw_item:FLAPS|UP:sim/cockpit2/controls/flap_ratio:<0.02
+sw_itemvoid:________________________________________________
+sw_remark:STARTING ENGINE CHECKLIST COMPLETED
+sw_checklist:BEFORE TAXI:BEFORE TAXI
+sw_rcolsize:60
+sw_remark:BEFORE TAXI CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:FUEL QUANTITY|CHECKED
+sw_item:FLIGHT CONTROLS|FREE & CORRECT
+sw_itemvoid:[SEATS BACKS & BELTS]|[UPRIGHT & SECURE]
+sw_item:CABIN DOORS|CLOSE:sim/cockpit/warnings/annunciators/cabin_door_open:0
+sw_item:FLIGHT INSTRUMENTS|SET
+sw_item:RADIOS & AVIONICS|SET
+sw_item:TRANSPONDER MODE|STANDBY:sim/cockpit/radios/transponder_mode:1
+sw_item:TAXI LIGHTS|ON:sim/cockpit2/switches/taxi_light_on:1
+sw_item:PARKING BRAKE|OFF:sim/flightmodel/controls/parkbrake:0
+sw_item:BRAKES|CHECKED
+sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
+sw_itemvoid:________________________________________________
+sw_remark:BEFORE TAXI CHECKLIST COMPLETED
+sw_checklist:BEFORE TAKEOFF:BEFORE TAKEOFF
+sw_rcolsize:60
+sw_remark:BEFORE TAKEOFF CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
+sw_item:MIXTURE|FULL RICH:sim/cockpit2/engine/actuators/mixture_ratio[0]:>0.9
+sw_item:FUEL SELECTOR VALVE|BOTH:sim/cockpit2/fuel/fuel_tank_selector:4
+sw_remark:MAGNETO TEST
+sw_item:THROTTLE|OPEN 1800 RPM:sim/cockpit2/engine/actuators/throttle_ratio[0]:>0.55
+sw_item:IGNITION SWITCH TO|LEFT:sim/cockpit2/engine/actuators/ignition_key[0]:2
+sw_item:IGNITION SWITCH TO|RIGHT:sim/cockpit2/engine/actuators/ignition_key[0]:1
+sw_item:MAGNETO DROP & DIFFERENCE|MAXIMUM 125 & 50
+sw_item:IGNITION SWITCH TO|BOTH:sim/cockpit2/engine/actuators/ignition_key[0]:3
+sw_item:THROTTLE|1000 RPM:sim/cockpit2/engine/actuators/throttle_ratio[0]:0.10|0.14
+sw_itemvoid:
+sw_item:ENGINE INSTRUMENTS|CHECKED GREEN
+sw_item:WARNING LIGHTS PANEL|CLEAR
+sw_item:STROBE LIGHTS|ON:sim/cockpit/electrical/strobe_lights_on:1
+sw_item:LANDING LIGHTS|ON:sim/cockpit/electrical/landing_lights_on:1
+sw_item:RADIOS & AVIONICS|CHECKED AND SET
+sw_item:AUTOPILOT|OFF:sim/cockpit2/autopilot/autopilot_on:0
+sw_item:ELEVATOR TRIM|SET FOR TAKEOFF:sim/cockpit2/controls/elevator_trim:-0.03|0.03
+sw_item:FLAPS (0 or 10)|AS REQUIRED
+sw_itemvoid:________________________________________________
+sw_remark:BEFORE TAKEOFF CHECKLIST COMPLETED
+sw_checklist:NORMAL TAKEOFF:NORMAL TAKEOFF
+sw_rcolsize:60
+sw_remark:NORMAL TAKEOFF CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:TAXI LIGHTS|OFF:sim/cockpit2/switches/taxi_light_on:0
+sw_item:TRANSPONDER MODE|ALTITUDE:sim/cockpit/radios/transponder_mode:3
+sw_item:FLAPS|AS REQUIRED
+sw_item:MIXTURE|FULL RICH:sim/cockpit2/engine/actuators/mixture_ratio[0]:>0.9
+sw_item:PARKING BRAKE|OFF:sim/flightmodel/controls/parkbrake:0
+sw_item:THROTTLE TO FULL SMOOTHLY|ENGINE RESPONDING:sim/cockpit2/engine/actuators/throttle_ratio[0]:>0.9
+sw_remark:INSTRUMENTS AND AIRSPEED GREEN AND ALIVE
+sw_item:ELEVATOR - LIFT NOSE WHEEL AT|60 KNOTS:sim/cockpit2/gauges/indicators/airspeed_kts_pilot:>60
+sw_remark:RECOMMENDED CLIMB AIRSPEED 70 TO 85 KNOTS
+sw_item:FLAPS|UP:sim/cockpit2/controls/flap_ratio:<0.02
+sw_itemvoid:________________________________________________
+sw_remark:NORMAL TAKEOFF CHECKLIST COMPLETED
+sw_checklist:CLIMB:CLIMB
+sw_rcolsize:60
+sw_remark:CLIMB CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:LANDING LIGHTS|OFF:sim/cockpit/electrical/landing_lights_on:0
+sw_item:THROTTLE|FULL:sim/cockpit2/engine/actuators/throttle_ratio[0]:>0.9
+sw_item:MIXTURE|FULL RICH:sim/cockpit2/engine/actuators/mixture_ratio[0]:>0.9
+sw_remark:RECOMMENDED CLIMB AIRSPEED 70 TO 85 KNOTS
+sw_itemvoid:________________________________________________
+sw_remark:CLIMB CHECKLIST COMPLETED
+sw_checklist:CRUISE:CRUISE
+sw_rcolsize:60
+sw_remark:CRUISE CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:POWER (2100-2500 RPM)|ADJUSTED:sim/cockpit2/engine/actuators/throttle_ratio[0]:<0.99
+sw_item:ELEVATOR TRIM|ADJUSTED
+sw_item:MIXTURE|LEAN:sim/cockpit2/engine/actuators/mixture_ratio[0]:<0.95
+sw_item:NAVAIDS & RADIOS|SET
+sw_item:NAVIGATION|ON COURSE
+sw_item:FLIGHT INSTRUMENTS|CHECKED
+sw_item:ENGINE INSTRUMENTS|CHECKED GREEN
+sw_item:FUEL QUANTITY|SUFFICIENT
+sw_itemvoid:________________________________________________
+sw_remark:CRUISE CHECKLIST COMPLETED (REPEAT AS REQUIRED)
+sw_checklist:DESCENT:DESCENT
+sw_rcolsize:60
+sw_remark:DESCENT CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:POWER|ADJUSTED
+sw_item:MIXTURE|FULL RICH:sim/cockpit2/engine/actuators/mixture_ratio[0]:>0.9
+sw_item:ALTIMETER|SET
+sw_item:NAV/GPS|SET
+sw_item:FUEL SELECTOR VALVE|BOTH:sim/cockpit2/fuel/fuel_tank_selector:4
+sw_item:FLAPS|AS REQUIRED
+sw_itemvoid: 0-10 BELOW 110 KIAS
+sw_itemvoid:10-30 BELOW 85  KIAS
+sw_itemvoid:________________________________________________
+sw_remark:DESCENT CHECKLIST COMPLETED
+sw_checklist:BEFORE LANDING:BEFORE LANDING
+sw_rcolsize:60
+sw_remark:BEFORE LANDING CHECKLIST
+sw_itemvoid:________________________________________________
+sw_itemvoid:[SEATS BACKS & BELTS]|[UPRIGHT & SECURE]
+sw_item:FUEL SELECTOR VALVE|BOTH:sim/cockpit2/fuel/fuel_tank_selector:4
+sw_item:MIXTURE|FULL RICH:sim/cockpit2/engine/actuators/mixture_ratio[0]:>0.9
+sw_item:LANDING LIGHTS|ON:sim/cockpit/electrical/landing_lights_on:1
+sw_item:TAXI LIGHTS|ON:sim/cockpit2/switches/taxi_light_on:1
+sw_item:AUTOPILOT|OFF:sim/cockpit2/autopilot/autopilot_on:0
+sw_itemvoid:________________________________________________
+sw_remark:BEFORE LANDING CHECKLIST COMPLETED
+sw_checklist:NORMAL LANDING:NORMAL LANDING
+sw_rcolsize:60
+sw_remark:NORMAL LANDING CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:FLAPS|AS REQUIRED:sim/cockpit2/controls/flap_ratio:>0.02
+sw_remark:RECOMMENDED APPROACH SPEEDS
+sw_remark:FLAPS UP 65 TO 75 KNOTS
+sw_remark:FLAPS DOWN 60 TO 70 KNOTS
+sw_remark:TOUCHDOWN  MAIN WHEELS FIRST - LOWER NOSE GENTLY
+sw_item:BRAKES|MINIMUM POSSIBLE:sim/cockpit2/gauges/indicators/airspeed_kts_pilot:<50
+sw_item:FLAPS|UP:sim/cockpit2/controls/flap_ratio:<0.02
+sw_itemvoid:________________________________________________
+sw_remark:NORMAL LANDING CHECKLIST COMPLETED
+sw_checklist:AFTER LANDING:AFTER LANDING
+sw_rcolsize:60
+sw_remark:AFTER LANDING CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:FLAPS|UP:sim/cockpit2/controls/flap_ratio:<0.02
+sw_item:LANDING LIGHTS|OFF:sim/cockpit/electrical/landing_lights_on:0
+sw_item:STROBE LIGHTS|OFF:sim/cockpit/electrical/strobe_lights_on:0
+sw_item:NAV LIGHTS|OFF:sim/cockpit/electrical/nav_lights_on:0
+sw_item:TRANSPONDER|STANDBY:sim/cockpit/radios/transponder_mode:1
+sw_itemvoid:________________________________________________
+sw_remark:AFTER LANDING CHECKLIST COMPLETED
+sw_checklist:ENGINE SHUTDOWN:ENGINE SHUTDOWN
+sw_rcolsize:60
+sw_remark:ENGINE SHUTDOWN CHECKLIST
+sw_itemvoid:________________________________________________
+sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
+sw_item:TRANSPONDER|OFF:sim/cockpit/radios/transponder_mode:0
+sw_item:ELECTRICAL EQUIPMENT|OFF
+sw_item:AUTOPILOT|OFF:sim/cockpit2/autopilot/autopilot_on:0
+sw_item:AVIONICS MASTER SWITCH|OFF:sim/cockpit/electrical/avionics_on:0
+sw_item:THROTTLE|1000/1200 RPM:sim/cockpit2/engine/actuators/throttle_ratio[0]:0.10|0.20
+sw_item:MIXTURE|CUTOFF SMOOTHLY:sim/cockpit2/engine/actuators/mixture_ratio[0]:<0.05
+sw_item:TAXI LIGHTS|OFF:sim/cockpit2/switches/taxi_light_on:0
+sw_item:BEACON LIGHT|OFF:sim/cockpit/electrical/beacon_lights_on:0
+sw_item:IGNITION SWITCH|OFF:sim/cockpit2/engine/actuators/ignition_key[0]:0
+sw_item:MASTER SWITCH (ALTERNATOR)|OFF:sim/cockpit/electrical/generator_on[0]:0
+sw_item:MASTER SWITCH (BATTERY)|OFF:sim/cockpit/electrical/battery_on:0
+sw_itemvoid:[CONTROL LOCK]|[INSTALLED]
+sw_item:FUEL SELECTOR VALVE|LEFT or RIGHT:sim/cockpit2/fuel/fuel_tank_selector:!4
+sw_itemvoid:________________________________________________
+sw_remark:ENGINE SHUTDOWN CHECKLIST COMPLETED
+#
+# Mod Log
+#
+# 1.2	Updated datarefs for numerous items to match X-Plane 11.32 modelling
+# 1.1.1	Removed "double-talk" in some checklists when using the co-pilot voice option
+# 1.1.0	Added Performance Limits
+#	Identified non-simulated items with [square brackets]
+#	Added steps and datarefs for magneto test
+#	Mods to recommended airspeeds
+# 1.0.0	Initial version
