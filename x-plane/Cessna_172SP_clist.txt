@@ -1,4 +1,5 @@
 # Cessna 172SP Streamlined Procedures for X-Plane Flight Simulator
+# Modified by Vlad Nestorov to match Brampton Flight Centre checklist
 #
 # The procedures were developed from the Cessna 172 manual for their structure and sequences.
 # The checklists were streamlined by omitting or simplifying procedures that are related to
@@ -49,31 +50,26 @@ sw_remark:PREFLIGHT - CABIN
 sw_itemvoid:________________________________________________
 sw_itemvoid:
 sw_itemvoid:[DOCUMENTS]|[ON BOARD]
-#sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
-#sw_item:CONTROL LOCK|OFF
-sw_item:AVIONICS MASTER SWITCH|OFF:sim/cockpit/electrical/avionics_on:0
-sw_item:MASTER SWITCH|OFF:sim/cockpit/electrical/generator_on[0]:0
+# sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
+# sw_item:CONTROL LOCK|OFF
+sw_item:AVIONICS Master|OFF:sim/cockpit/electrical/avionics_on:0
+sw_item:Master|OFF:sim/cockpit/electrical/generator_on[0]:0
 sw_item:MIXTURE|IDLE CUTOFF:sim/cockpit2/engine/actuators/mixture_ratio[0]:<0.05
 sw_item:THROTTLE|CLOSED:sim/cockpit2/engine/actuators/throttle_ratio[0]:<0.05
 sw_item:SWITCHES/MAGNETOS|OFF:sim/cockpit2/engine/actuators/ignition_key[0]:0
-sw_item:MASTER SWITCH|ON:sim/cockpit/electrical/generator_on[0]:1
+sw_item:Master|ON:sim/cockpit/electrical/generator_on[0]:1
 sw_item:FLAPS|Fully Extended:sim/cockpit2/controls/flap_ratio:>0.90
 sw_item:FUEL QUANTITY|SUFFICIENT
-sw_item:MASTER SWITCH|OFF:sim/cockpit/electrical/generator_on[0]:0
+sw_item:Master|OFF:sim/cockpit/electrical/generator_on[0]:0
 #
-#sw_item:AVIONICS MASTER SWITCH|ON:sim/cockpit/electrical/avionics_on:1
+#sw_item:AVIONICS Master|ON:sim/cockpit/electrical/avionics_on:1
 #sw_item:AVIONICS COOLING FAN|AUDIBLE:sim/cockpit/electrical/avionics_on:1
-#sw_item:AVIONICS MASTER SWITCH|OFF:sim/cockpit/electrical/avionics_on:0
+#sw_item:AVIONICS Master|OFF:sim/cockpit/electrical/avionics_on:0
 #sw_item:STATIC PRESSURE ALTERNATE|OFF:sim/cockpit2/switches/alternate_static_air_ratio:<0.1
 #sw_item:WARNING LIGHTS PANEL|TESTED:sim/cockpit/warnings/annunciator_test_pressed:1
 #sw_item:FUEL SELECTOR VALVE|BOTH:laminar/c172/fuel/fuel_tank_selector:4
 #sw_item:FUEL SHUTOFF VALVE|PUSHED IN:laminar/c172/fuel/fuel_cutoff_selector:0
 #sw_item:FLAPS|UP:sim/cockpit2/controls/flap_ratio:<0.02
-sw_item:PITOT HEAT|ON:sim/cockpit/switches/pitot_heat_on:1
-sw_item:AMMETER CURRENT LOAD|CHECK
-sw_item:PITOT HEAT|OFF:sim/cockpit/switches/pitot_heat_on:0
-sw_item:MASTER SWITCH (BATTERY)|OFF:sim/cockpit/electrical/battery_on:0
-sw_item:ELEVATOR TRIM|SET FOR TAKEOFF:sim/cockpit2/controls/elevator_trim:-0.03|0.03
 sw_itemvoid:________________________________________________
 sw_remark:PREFLIGHT CHECKLIST COMPLETED
 sw_checklist:BEFORE STARTING ENGINE:BEFORE STARTING ENGINE
@@ -87,30 +83,33 @@ sw_itemvoid:[SEATS & BELTS]|[ADJUSTED & SECURE]
 sw_itemvoid:[CIRCUIT BREAKERS]|[CHECKED IN]
 sw_itemvoid:[ELECTRICAL EQUIPMENT]|[OFF]
 #sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
-sw_item:AUTOPILOT|OFF:sim/cockpit2/autopilot/autopilot_on:0
-sw_item:AVIONICS MASTER SWITCH|OFF:sim/cockpit/electrical/avionics_on:0
-sw_item:FUEL SELECTOR VALVE|BOTH:sim/cockpit2/fuel/fuel_tank_selector:4
-sw_item:FUEL SHUTOFF VALVE|PUSHED IN:sim/cockpit2/fuel/fuel_tank_selector:>0
+#sw_item:AUTOPILOT|OFF:sim/cockpit2/autopilot/autopilot_on:0
+#sw_item:AVIONICS Master|OFF:sim/cockpit/electrical/avionics_on:0
+#sw_item:FUEL SHUTOFF VALVE|PUSHED IN:sim/cockpit2/fuel/fuel_tank_selector:>0
+sw_item:FLIGHT CONTROLS|FREE & CORRECT
+sw_item:Circuit Breakers|Check In
+#sw_item:FUEL SELECTOR VALVE|BOTH:sim/cockpit2/fuel/fuel_tank_selector:4
 sw_itemvoid:________________________________________________
 sw_remark:BEFORE STARTING ENGINE CHECKLIST COMPLETED
 sw_checklist:STARTING ENGINE:STARTING ENGINE
 sw_rcolsize:60
 sw_remark:STARTING ENGINE CHECKLIST
 sw_itemvoid:________________________________________________
-sw_item:MASTER SWITCH (BATTERY)|ON:sim/cockpit/electrical/battery_on:1
+sw_item:MASTER Battery|ON:sim/cockpit/electrical/battery_on:1
 sw_item:BEACON LIGHT|ON:sim/cockpit/electrical/beacon_lights_on:1
 sw_item:THROTTLE|OPEN 1/4 INCH:sim/cockpit2/engine/actuators/throttle_ratio[0]:0.15|0.20
 sw_item:MIXTURE|FULL RICH:sim/cockpit2/engine/actuators/mixture_ratio[0]:>0.95
 sw_itemvoid:[CARB HEAT]|[COLD]
 sw_item:AUX FUEL PUMP|ON (3 Seconds):sim/cockpit/engine/fuel_pump_on[0]:1
-sw_item:AUX FUEL PUMP|OFF:sim/cockpit/engine/fuel_pump_on[0]:0
+sw_item:MIXTURE|Idle Cutoff:sim/cockpit2/engine/actuators/mixture_ratio[0]:<0.05
 sw_item:PROPELLER AREA|CLEAR
 sw_item:IGNITION SWITCH|START:sim/cockpit2/engine/actuators/ignition_key[0]:4
+sw_item:MIXTURE|Advance to Rich:sim/cockpit2/engine/actuators/mixture_ratio[0]:>0.50
 sw_item:OIL PRESSURE|CHECKED
-sw_item:MASTER SWITCH (ALTERNATOR)|ON:sim/cockpit/electrical/generator_on[0]:1
+sw_item:Master (ALTERNATOR)|ON:sim/cockpit/electrical/generator_on[0]:1
 sw_item:AMMETER|CHECKED
-sw_item:Nav LIGHTS|ON (AT NIGHT):sim/cockpit2/switches/navigation_lights_on:1
-sw_item:AVIONICS MASTER SWITCH|ON:sim/cockpit/electrical/avionics_on:1
+# sw_item:Nav LIGHTS|ON (AT NIGHT):sim/cockpit2/switches/navigation_lights_on:1
+sw_item:AVIONICS Master|ON:sim/cockpit/electrical/avionics_on:1
 sw_itemvoid:[RADIOS & GPS]|[ON]
 sw_item:FLAPS|UP:sim/cockpit2/controls/flap_ratio:<0.02
 sw_itemvoid:________________________________________________
@@ -255,14 +254,14 @@ sw_item:PARKING BRAKE|ON:sim/flightmodel/controls/parkbrake:1
 sw_item:TRANSPONDER|OFF:sim/cockpit/radios/transponder_mode:0
 sw_item:ELECTRICAL EQUIPMENT|OFF
 sw_item:AUTOPILOT|OFF:sim/cockpit2/autopilot/autopilot_on:0
-sw_item:AVIONICS MASTER SWITCH|OFF:sim/cockpit/electrical/avionics_on:0
+sw_item:AVIONICS Master|OFF:sim/cockpit/electrical/avionics_on:0
 sw_item:THROTTLE|1000/1200 RPM:sim/cockpit2/engine/actuators/throttle_ratio[0]:0.10|0.20
 sw_item:MIXTURE|CUTOFF SMOOTHLY:sim/cockpit2/engine/actuators/mixture_ratio[0]:<0.05
 sw_item:TAXI LIGHTS|OFF:sim/cockpit2/switches/taxi_light_on:0
 sw_item:BEACON LIGHT|OFF:sim/cockpit/electrical/beacon_lights_on:0
 sw_item:IGNITION SWITCH|OFF:sim/cockpit2/engine/actuators/ignition_key[0]:0
-sw_item:MASTER SWITCH (ALTERNATOR)|OFF:sim/cockpit/electrical/generator_on[0]:0
-sw_item:MASTER SWITCH (BATTERY)|OFF:sim/cockpit/electrical/battery_on:0
+sw_item:Master (ALTERNATOR)|OFF:sim/cockpit/electrical/generator_on[0]:0
+sw_item:Master (BATTERY)|OFF:sim/cockpit/electrical/battery_on:0
 sw_itemvoid:[CONTROL LOCK]|[INSTALLED]
 sw_item:FUEL SELECTOR VALVE|LEFT or RIGHT:sim/cockpit2/fuel/fuel_tank_selector:!4
 sw_itemvoid:________________________________________________
