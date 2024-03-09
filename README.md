@@ -69,9 +69,6 @@ Bottom frame = Top Frame + (0.089 - 0.038) / 2 * 2 = 0.897
 | Bottom cross | 1 | 0.897 |  |
 | ground | 2 | 0.96 |  |
 
-Total = 2.893 + 2 * 1.000
-2438mm in 2x4x8
-
 ### Rudder position
 back of Saitek rudder to back 2x4 = 0.070
 back of rudder = -0.313
@@ -97,33 +94,20 @@ Headset calibration point
 
 
 ## Dashboard measurements
-Reference point: Top of dashboard, below center of yoke.
+Reference point | Top of dashboard, below center of yoke.
 
-Toggle switches (x, y)
-0.011, -0.110
--0.012
--0.036
--0.061
--0.084
--0.107
--0.130
-
-Ignition: -0.220, -0.096
-Master center: -0.166, -0.088
-Avionics : 0.042, -0.088
-Throttle: 0.253, -0.078
-Mixture: 0.320, -0.078
-Flaps: 0.442, -0.080
-
-
-
-
-
-toggle ON OFF
-1 | 16 15
-12 11
-10 9
-14 13
-8 7
-6 5
-6 3
+Part | x | y
+--- | --- | ---
+Toggle switch | 0.011 | -0.110
+Toggle switch | -0.0121 | -0.110
+Toggle switch | -0.0361 | -0.110
+Toggle switch | -0.0611 | -0.110
+Toggle switch | -0.0841 | -0.110
+Toggle switch | -0.1071 | -0.110
+Toggle switch | -0.1301 | -0.110
+Ignition | -0.220 |  -0.096
+Master center | -0.166 |  -0.088
+Avionics  | 0.042 |  -0.088
+Throttle | 0.253 |  -0.078
+Mixture | 0.320 |  -0.078
+Flaps | 0.442 |  -0.080
